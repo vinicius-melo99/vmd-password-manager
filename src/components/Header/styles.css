@@ -1,0 +1,12 @@
+@import "../../variaveis.css";
+
+h1 {
+  font-size: 48px;
+  position: relative;
+}
+
+.blue-asterisk {
+  color: var(--blue-asterisk);
+  position: relative;
+  top: 10px;
+}
