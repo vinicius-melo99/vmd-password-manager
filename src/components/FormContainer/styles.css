@@ -1,0 +1,12 @@
+@import "../../variaveis.css";
+
+.form-container {
+  width: 70%;
+  padding: 30px;
+  min-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  background-color: var(--form-bg-color);
+  border-radius: 10px;
+  gap: 3.75em
+}

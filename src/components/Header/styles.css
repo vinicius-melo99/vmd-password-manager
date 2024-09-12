@@ -1,5 +1,11 @@
 @import "../../variaveis.css";
 
+header {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 h1 {
   font-size: 48px;
   position: relative;

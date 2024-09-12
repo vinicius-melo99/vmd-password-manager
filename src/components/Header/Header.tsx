@@ -1,11 +1,10 @@
-import Title from '../Title';
+import Title from '../Title/Title';
 import './styles.css';
 
-const index = () => {
+const Header = () => {
   return (
     <header>
       <Title>
-        <h1>
           Gerenciador {' '}
           <span className='blue-asterisk'>
             * {' '}
@@ -15,10 +14,9 @@ const index = () => {
             * {' '}
           </span> 
           Senhas
-        </h1>
       </Title>
     </header>
   )
 }
 
-export default index
+export default Header;

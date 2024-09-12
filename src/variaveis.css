@@ -1,4 +1,11 @@
 :root {
   --main-color: #272A37;
   --blue-asterisk: #3187E7;
+  --form-bg-color: #1E2029;
+  --input-bg-color: #3B3F50;
+  --label-input-color: #8D8D8D;
+  --required-color: #D11D1D;
+  --submit-btn-color: #3590F5;
+  --submit-btn-hover-color: #226ec5;
+  --rules-container-bg-color: #252730;
 }
