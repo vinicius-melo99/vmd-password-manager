@@ -16,3 +16,15 @@ export type InputProps = {
   autoFocus: boolean,
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void,
 }
+
+export type InputsContainerProps = {
+  checkPasswordRules: (password: string) => void,
+  allRulesOk: boolean
+}
+
+export type RulesContainerProps = {
+  minLenghRule: boolean,
+  maxLenghRule: boolean ,
+  lettersAndNumbersRule: boolean ,
+  specialCharRule: boolean
+}

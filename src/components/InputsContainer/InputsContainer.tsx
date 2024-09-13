@@ -1,8 +1,9 @@
 import './styles.css';
 import FormInput from '../FormInput/FormInput';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { InputsContainerProps } from '../../types';
 
-const InputsContainer = () => {
+const InputsContainer = ({ checkPasswordRules, allRulesOk }: InputsContainerProps) => {
   const [service, setService] = useState('');
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
@@ -24,6 +25,7 @@ const InputsContainer = () => {
     
       case 'password-input':
         setPassword(value);
+        checkPasswordRules(value);
         break;
 
       case 'url-input':
@@ -33,7 +35,6 @@ const InputsContainer = () => {
       default:
         break;
     }
-    
   }
 
   return (
@@ -81,8 +82,17 @@ const InputsContainer = () => {
           </span>
         </div>
         <div className='buttons-wrapper'>
-          <button className='cancel-button'>Cancelar</button>
-          <button className='submit-button'>Cadastrar</button>
+          <button 
+            className='cancel-button'
+          >
+            Cancelar
+          </button>
+          <button 
+            className='submit-button'
+            disabled={!(service && login && password && allRulesOk)}
+          >
+            Cadastrar
+          </button>
         </div>
       </form>
     </div>

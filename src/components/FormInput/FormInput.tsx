@@ -5,7 +5,8 @@ import { InputProps } from '../../types';
 const FormInput = ({ labelText, type, name, value, autoFocus, handleInput }: InputProps) => {
   return (
     <label>
-      { (labelText === "Login" || labelText === "Senha") ? 
+      { (labelText === "Login" || 
+        labelText === "Senha" || labelText === "Nome do Serviço") ? 
         <>{labelText}<span className='required'> *</span></> 
         : labelText }
       <div></div>
