@@ -18,6 +18,8 @@ label input {
   background-color: var(--input-bg-color);
   color: white;
   margin-bottom: 12px;
+  animation-name: test;
+  animation-duration: 2s;
 }
 
 label input:focus {
@@ -26,4 +28,9 @@ label input:focus {
 
 label span.required {
   color: var(--required-color);
+}
+
+@keyframes test {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
