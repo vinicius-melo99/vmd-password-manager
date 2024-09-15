@@ -1,0 +1,16 @@
+@import '../../variaveis.css';
+
+.home-division-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* background-color: rgb(78, 78, 78); */
+  padding: 50px 2% 0 2%;
+}
+
+.line {
+  display: inline-block;
+  width: 291px;
+  height: 3px;
+  background-color: var(--home-division-color);
+}

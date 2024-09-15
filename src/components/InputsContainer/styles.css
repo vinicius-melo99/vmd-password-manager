@@ -1,0 +1,67 @@
+@import '../../variaveis.css';
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.login-password-wrapper {
+  display: flex;
+  gap: 1.5em;
+}
+
+.inputs-container span {
+  color: var(--label-input-color);
+  font-size: 13px;
+}
+
+.inputs-container span span.required{
+  color: var(--required-color);
+}
+
+.required-wrapper {
+  margin-bottom: 25px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-wrapper .cancel-button {
+  height: 22px;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--submit-btn-color);
+  font-weight: bolder;
+  font-size: 15px;
+  border: none
+}
+
+.buttons-wrapper .submit-button {
+  width: 190px;
+  height: 45px;
+  background-color: var(--submit-btn-color);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.buttons-wrapper .submit-button:hover {
+  background-color: var(--submit-btn-hover-color);
+}
+
+.buttons-wrapper .submit-button:disabled {
+  cursor: not-allowed;
+}
+
+.buttons-wrapper .cancel-button:hover {
+  text-decoration: underline;
+}

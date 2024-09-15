@@ -1,0 +1,40 @@
+@import "../../variaveis.css";
+
+.rules-container {
+  display: flex;
+  width: 40%;
+  position: relative;
+}
+
+.rules {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 122px);
+  background-color: var(--rules-container-bg-color);
+  border-radius: 10px;
+}
+
+.rules ul{
+  padding: 30px;
+  list-style-position: inside;
+  list-style: none;
+}
+
+.rules ul li:last-of-type{
+  padding-bottom: 0;
+}
+
+.rules ul li {
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.arrow-left {
+  width: 20.5px;
+  height: 41px;
+  position: absolute;
+  top: calc(50% - (41px / 2));
+  left: -20.5px;
+  background-image: url('../../assets/arrow-left.svg');
+}
