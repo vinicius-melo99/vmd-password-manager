@@ -3,7 +3,11 @@ import FormInput from '../FormInput/FormInput';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { InputsContainerProps } from '../../types';
 
-const InputsContainer = ({ checkPasswordRules, allRulesOk }: InputsContainerProps) => {
+const InputsContainer = ({ 
+    checkPasswordRules,
+    allRulesOk,
+    handleSetShowForm,
+  }: InputsContainerProps) => {
   const [service, setService] = useState('');
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
@@ -84,6 +88,7 @@ const InputsContainer = ({ checkPasswordRules, allRulesOk }: InputsContainerProp
         <div className='buttons-wrapper'>
           <button 
             className='cancel-button'
+            onClick={ handleSetShowForm }
           >
             Cancelar
           </button>

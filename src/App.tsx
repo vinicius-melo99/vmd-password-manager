@@ -1,11 +1,11 @@
-import Header from './components/Header/Header';
-import FormContainer from './components/FormContainer/FormContainer';
+// import Header from './components/Header/Header';
+// import FormContainer from './components/FormContainer/FormContainer';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
     <>
-      <Header />
-      <FormContainer />
+      <Home />
     </>
   )
 }

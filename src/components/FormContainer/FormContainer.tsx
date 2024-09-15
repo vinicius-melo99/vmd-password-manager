@@ -2,6 +2,7 @@ import './styles.css';
 import InputsContainer from '../InputsContainer/InputsContainer';
 import RulesContainer from '../RulesContainer/RulesContainer';
 import { useEffect, useState } from 'react';
+import NewPasswordButton from '../NewPasswordButton/NewPasswordButton';
 
 const FormContainer = () => {
   const [minLenghRule, setMinLenghRule] = useState(false);
@@ -9,6 +10,7 @@ const FormContainer = () => {
   const [lettersAndNumbersRule, setLettersAndNumbersRule] = useState(false);
   const [specialCharRule, setSpecialCharRule] = useState(false);
   const [allRulesOk, setAllRulesOk] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     checkRules();
@@ -30,10 +32,13 @@ const FormContainer = () => {
       setAllRulesOk(check);
   }
 
-  return (
+  const handleSetShowForm = () => setShowForm(!showForm);
+
+  return showForm ? (
     <section className='form-container'>
       <InputsContainer 
         checkPasswordRules={ checkPasswordRules }
+        handleSetShowForm={ handleSetShowForm }
         allRulesOk={ allRulesOk }
       />
       <RulesContainer
@@ -43,7 +48,9 @@ const FormContainer = () => {
         specialCharRule={ specialCharRule }
       />
     </section>
-  )
+  ) : <NewPasswordButton 
+        handleSetShowForm={ handleSetShowForm }
+      />
 }
 
 export default FormContainer

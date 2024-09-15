@@ -19,6 +19,7 @@ export type InputProps = {
 
 export type InputsContainerProps = {
   checkPasswordRules: (password: string) => void,
+  handleSetShowForm: () => void,
   allRulesOk: boolean
 }
 
@@ -27,4 +28,8 @@ export type RulesContainerProps = {
   maxLenghRule: boolean ,
   lettersAndNumbersRule: boolean ,
   specialCharRule: boolean
+}
+
+export type NewPasswordButtonProps = {
+  handleSetShowForm: () => void
 }
