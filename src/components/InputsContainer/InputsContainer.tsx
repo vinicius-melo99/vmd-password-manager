@@ -62,8 +62,8 @@ const InputsContainer = ({
             autoFocus={ false }
           />
           <FormInput 
-            labelText='Senha' 
-            type='password' 
+            labelText='Senha'
+            type='password'
             name='password-input'
             handleInput={ handleInput }
             value={ password }
