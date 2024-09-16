@@ -24,11 +24,12 @@ const FormInput = ({ labelText, type, name, value, autoFocus, handleInput }: Inp
           value={ value }
         />
         
-        <button
-          data-tooltip-id='eye-button-tooltip'
-          data-tooltip-content={ showPassword ? 'Esconder Senha' : 'Mostrar Senha'}
-          onClick={ () => setShowPassword(!showPassword) }
-        >
+        { name === 'password-input' && (
+          <button
+            data-tooltip-id='eye-button-tooltip'
+            data-tooltip-content={ showPassword ? 'Esconder Senha' : 'Mostrar Senha'}
+            onClick={ () => setShowPassword(!showPassword) }
+          >
           <Tooltip 
             id='eye-button-tooltip' 
             place='bottom'
@@ -43,7 +44,7 @@ const FormInput = ({ labelText, type, name, value, autoFocus, handleInput }: Inp
               color='#1E2029'
             />
            )}
-        </button>
+        </button>) }
       </div>
     </label>
   )
