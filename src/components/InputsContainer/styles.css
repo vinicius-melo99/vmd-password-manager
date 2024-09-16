@@ -8,7 +8,7 @@
 
 .login-password-wrapper {
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .inputs-container span {
