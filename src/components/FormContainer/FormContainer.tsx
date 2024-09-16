@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 import NewPasswordButton from '../NewPasswordButton/NewPasswordButton';
 
 const FormContainer = () => {
-  const [minLenghRule, setMinLenghRule] = useState(false);
-  const [maxLenghRule, setMaxLenghRule] = useState(true);
+  const [minLenghtRule, setMinLenghtRule] = useState(false);
+  const [maxLenghtRule, setMaxLenghtRule] = useState(true);
   const [lettersAndNumbersRule, setLettersAndNumbersRule] = useState(false);
   const [specialCharRule, setSpecialCharRule] = useState(false);
   const [allRulesOk, setAllRulesOk] = useState(false);
@@ -20,19 +20,29 @@ const FormContainer = () => {
     const regex1 = new RegExp(/^(?=.*[a-zA-Z])(?=.*\d).+$/);
     const regex2 = new RegExp(/[!@#$%^&*(),.?":{}|<>]/);
 
-    setMinLenghRule(password.length >= 8);
-    setMaxLenghRule(password.length <= 16);
+    setMinLenghtRule(password.length >= 8);
+    setMaxLenghtRule(password.length <= 16);
     setLettersAndNumbersRule(regex1.test(password));
     setSpecialCharRule(regex2.test(password));
   }
 
   const checkRules = () => {
-    const check = (minLenghRule && 
-      maxLenghRule && lettersAndNumbersRule && specialCharRule);
+    const check = (minLenghtRule && 
+      maxLenghtRule && lettersAndNumbersRule && specialCharRule);
       setAllRulesOk(check);
   }
 
-  const handleSetShowForm = () => setShowForm(!showForm);
+  const resetRules = () => {
+    setMinLenghtRule(false);
+    setMaxLenghtRule(true);
+    setLettersAndNumbersRule(false);
+    setSpecialCharRule(false);
+  }
+
+  const handleSetShowForm = () => {
+    resetRules();
+    setShowForm(!showForm)
+  };
 
   return showForm ? (
     <section className='form-container'>
@@ -42,8 +52,8 @@ const FormContainer = () => {
         allRulesOk={ allRulesOk }
       />
       <RulesContainer
-        minLenghRule={ minLenghRule }
-        maxLenghRule={ maxLenghRule }
+        minLenghRule={ minLenghtRule }
+        maxLenghRule={ maxLenghtRule }
         lettersAndNumbersRule={ lettersAndNumbersRule }
         specialCharRule={ specialCharRule }
       />
