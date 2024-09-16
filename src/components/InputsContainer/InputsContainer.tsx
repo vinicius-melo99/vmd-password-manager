@@ -13,7 +13,7 @@ const InputsContainer = ({
   const [password, setPassword] = useState('');
   const [url, setUrl] = useState('');
 
-  const handleSubmit= (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   }
 
@@ -88,7 +88,10 @@ const InputsContainer = ({
         <div className='buttons-wrapper'>
           <button 
             className='cancel-button'
-            onClick={ handleSetShowForm }
+            onClick={ (e) => {
+              e.preventDefault();
+              handleSetShowForm();
+            }}
           >
             Cancelar
           </button>
