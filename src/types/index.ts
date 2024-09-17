@@ -33,3 +33,14 @@ export type RulesContainerProps = {
 export type NewPasswordButtonProps = {
   handleSetShowForm: () => void
 }
+
+export type Service = {
+  service: string,
+  login: string,
+  password: string,
+  url: string,
+}
+
+export type ServicesContainerProps = {
+  serviceList: Service[]
+}
