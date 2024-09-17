@@ -20,6 +20,7 @@ export type InputProps = {
 export type InputsContainerProps = {
   checkPasswordRules: (password: string) => void,
   handleSetShowForm: () => void,
+  addNewService: (service: Service) => void
   allRulesOk: boolean
 }
 
@@ -43,4 +44,12 @@ export type Service = {
 
 export type ServicesContainerProps = {
   serviceList: Service[]
+}
+
+export type FormContainerProps = {
+  addNewService: (service: Service) => void
+}
+
+export type ServiceCardProps = {
+  service: Service
 }

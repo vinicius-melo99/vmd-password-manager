@@ -52,6 +52,7 @@
   font-size: 15px;
   font-weight: bolder;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .buttons-wrapper .submit-button:hover {

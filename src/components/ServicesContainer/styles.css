@@ -4,10 +4,9 @@
   display: flex;
   justify-content: center;
   width: 70%;
-  padding: 30px;
+  padding: 30px 0;
   min-width: 600px;
   margin: 0 auto;
-  display: flex;
   border-radius: 10px;
   /* gap: 3.75em; */
   /* background-color: green; */
@@ -71,7 +70,7 @@
 .service-list {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 30px 0;
   /* background-color: green; */
 }

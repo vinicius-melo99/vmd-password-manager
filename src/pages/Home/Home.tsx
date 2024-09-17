@@ -9,13 +9,13 @@ const Home = () => {
   const [serviceList, setServiceList] = useState<Service[]>([]);
 
   const addNewService = (service: Service) => {
-    
+    setServiceList([...serviceList, service]);
   }
 
   return (
     <>
       <Header />
-      <FormContainer />
+      <FormContainer addNewService={ addNewService }/>
       <HomeDivision />
       <ServicesContainer serviceList={serviceList}/>
     </>

@@ -1,3 +1,5 @@
+@import '../../variaveis.css';
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -17,4 +19,9 @@
   font-size: 15px;
   font-weight: bolder;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.new-password-btn:hover {
+  background-color: var(--submit-btn-hover-color);
 }
