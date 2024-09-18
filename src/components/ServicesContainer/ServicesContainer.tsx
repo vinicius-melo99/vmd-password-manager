@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ServicesContainerProps } from '../../types';
 import { IoIosUnlock } from 'react-icons/io';
-import './styles.css';
 import ServiceCard from '../ServiceCard/ServiceCard';
+import './styles.css';
 
 const ServicesContainer = ({ serviceList }: ServicesContainerProps) => {
   const [showPasswords, setShowPasswords] = useState(false);
@@ -40,15 +40,21 @@ const ServicesContainer = ({ serviceList }: ServicesContainerProps) => {
             </label>
           </div>
 
-          <div className='service-list'>
+          <div 
+            className='service-list'
+            style={ { display: !serviceList.length ? 
+              'flex' : 'grid'
+            } }
+          >
             { !serviceList.length ? (
               <div className='no-service'>
                 <p>Não há nenhuma senha cadastrada...</p>
                 <IoIosUnlock color='#838383' size={30}/>
               </div>) : serviceList.map((service, index) => (
-                <ServiceCard 
+                <ServiceCard
                   key={index}
                   service={service}
+                  showPasswords={showPasswords}
                 />
               ))}
           </div>

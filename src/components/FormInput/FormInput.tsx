@@ -22,9 +22,16 @@ const FormInput = ({
         labelText === "Senha" || labelText === "Nome do Serviço") ? 
         <>{labelText}<span className='required'> *</span></> 
         : labelText }
-      <div className='input-wrapper'>
+        <div className={(
+          (name === 'password-input' || name === 'login-input') ? 
+          'input-wrapper input-login-pass-wrapper' : 'input-wrapper'
+          )}>
         <input
           id={ name === 'password-input' ? 'password-input': undefined }
+          className={ (
+            (name === 'password-input' || name === 'login-input') ? 
+            'login-password-input' : undefined
+          ) }
           autoFocus={ autoFocus }
           name={ name }
           type={ (name === 'password-input' && showPassword) ? 'text' : type }

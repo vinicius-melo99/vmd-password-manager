@@ -51,5 +51,6 @@ export type FormContainerProps = {
 }
 
 export type ServiceCardProps = {
-  service: Service
+  service: Service,
+  showPasswords: boolean
 }
