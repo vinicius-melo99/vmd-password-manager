@@ -5,13 +5,18 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  width: 240px;
+  width: calc((100% / 3) - 15px);
   height: 190px;
   background-color: var(--service-card-bg-color);
   border-radius: 10px;
-  margin: 0 auto;
   animation: service-card-animation;
   animation-duration: 300ms;
+  -webkit-animation: service-card-animation;
+  -webkit-animation-duration: 300ms;
+  -moz-animation: service-card-animation;
+  -moz-animation-duration: 300ms;
+  -o-animation: service-card-animation;
+  -o-animation-duration: 300ms;
 }
 
 .service-card .url-box,
@@ -76,6 +81,21 @@
 }
 
 @keyframes service-card-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes service-card-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes service-card-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-o-keyframes service-card-animation {
   from { opacity: 0; }
   to { opacity: 1; }
 }

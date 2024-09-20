@@ -45,9 +45,6 @@ const ServicesContainer = ({
 
           <div 
             className='service-list'
-            style={ { display: !serviceList.length ? 
-              'flex' : 'grid'
-            } }
           >
             { !serviceList.length ? (
               <div className='no-service'>
