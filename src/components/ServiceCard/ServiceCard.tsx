@@ -3,16 +3,18 @@ import { IoIosLock } from "react-icons/io";
 import { FaLink, FaLinkSlash } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa";
 import { Tooltip } from 'react-tooltip';
+import { MouseEvent, useEffect, useState } from 'react';
 import './styles.css';
-import { useEffect, useState } from 'react';
 
 const ServiceCard = ({ service: {
+  id,
   service,
   login,
   password,
-  url
+  url,
 },
-  showPasswords }: ServiceCardProps) => {
+  showPasswords,
+  deleteServiceFromLS }: ServiceCardProps) => {
   const [maskedPassword, setMaskedPassword] = useState('');
   
   useEffect(() => {
@@ -21,7 +23,12 @@ const ServiceCard = ({ service: {
       .join('');
 
     setMaskedPassword(mask);
-  }, [maskedPassword])
+  }, [maskedPassword]);
+
+  const handleDelete = (e: MouseEvent<HTMLButtonElement>) => {
+    const buttonId = e.currentTarget.id;
+    deleteServiceFromLS(buttonId);
+  }
 
   return (
     <div className='service-card'>
@@ -74,14 +81,17 @@ const ServiceCard = ({ service: {
       </div>
       <div className='delete-box'>
         <button
+          id={id}
           data-tooltip-id='delete-tooltip'
           data-tooltip-content='Excluir'
+          onClick={ handleDelete }
         >
-          <Tooltip 
+          <Tooltip
             id='delete-tooltip'
             place='bottom'
           />
-          <FaTrash 
+          <FaTrash
+            name={id}
             color='#F58989'
             size={19}
           />

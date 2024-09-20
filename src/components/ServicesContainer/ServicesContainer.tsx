@@ -4,7 +4,10 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 import './styles.css';
 import { ServicesContainerProps } from '../../types';
 
-const ServicesContainer = ({ serviceList }: ServicesContainerProps) => {
+const ServicesContainer = ({ 
+  serviceList,
+  deleteServiceFromLS
+}: ServicesContainerProps) => {
   const [showPasswords, setShowPasswords] = useState(false);
 
   const handleToggleButton = () => setShowPasswords(!showPasswords);
@@ -55,6 +58,7 @@ const ServicesContainer = ({ serviceList }: ServicesContainerProps) => {
                   key={index}
                   service={service}
                   showPasswords={showPasswords}
+                  deleteServiceFromLS={ deleteServiceFromLS }
                 />
               ))}
           </div>

@@ -36,6 +36,7 @@ export type NewPasswordButtonProps = {
 }
 
 export type Service = {
+  id: string,
   service: string,
   login: string,
   password: string,
@@ -43,7 +44,8 @@ export type Service = {
 }
 
 export type ServicesContainerProps = {
-  serviceList: Service[]
+  serviceList: Service[],
+  deleteServiceFromLS: (idToRemove: string) => void
   // triggerUpdate: boolean
 }
 
@@ -53,5 +55,6 @@ export type FormContainerProps = {
 
 export type ServiceCardProps = {
   service: Service,
-  showPasswords: boolean
+  showPasswords: boolean,
+  deleteServiceFromLS: (idToRemove: string) => void
 }

@@ -16,7 +16,17 @@ const InputsContainer = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setServiceToLS({ service, login, password, url });
+    const id = crypto.randomUUID();
+
+    const newService = {
+      id,
+      service,
+      login,
+      password,
+      url
+    }
+
+    setServiceToLS(newService);
     resetStates();
     handleSetShowForm();
   }

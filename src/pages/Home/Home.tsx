@@ -36,12 +36,26 @@ const Home = () => {
     }
   }
 
+  const deleteServiceFromLS = (idToRemove: string) => {
+    const index = serviceList.findIndex(({ id }) => id === idToRemove);
+    const currentServices = [...serviceList];
+
+    currentServices.splice(index, 1);
+
+    setServiceList([...currentServices]);
+
+    localStorage.setItem('serviceList', JSON.stringify(currentServices));
+  }
+
   return (
     <>
       <Header />
       <FormContainer setServiceToLS={ setServiceToLS }/>
       <HomeDivision />
-      <ServicesContainer serviceList={ serviceList }/>
+      <ServicesContainer 
+        serviceList={ serviceList }
+        deleteServiceFromLS={ deleteServiceFromLS }
+      />
     </>
   )
 }
