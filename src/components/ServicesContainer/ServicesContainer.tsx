@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ServicesContainerProps } from '../../types';
 import { IoIosUnlock } from 'react-icons/io';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './styles.css';
+import { ServicesContainerProps } from '../../types';
 
 const ServicesContainer = ({ serviceList }: ServicesContainerProps) => {
   const [showPasswords, setShowPasswords] = useState(false);

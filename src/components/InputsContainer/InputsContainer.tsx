@@ -6,7 +6,7 @@ import { InputsContainerProps } from '../../types';
 const InputsContainer = ({ 
     checkPasswordRules,
     handleSetShowForm,
-    addNewService,
+    setServiceToLS,
     allRulesOk,
   }: InputsContainerProps) => {
   const [service, setService] = useState('');
@@ -16,7 +16,7 @@ const InputsContainer = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addNewService({ service, login, password, url });
+    setServiceToLS({ service, login, password, url });
     resetStates();
     handleSetShowForm();
   }
