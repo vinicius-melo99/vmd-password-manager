@@ -3,8 +3,9 @@ import InputsContainer from '../InputsContainer/InputsContainer';
 import RulesContainer from '../RulesContainer/RulesContainer';
 import { useEffect, useState } from 'react';
 import NewPasswordButton from '../NewPasswordButton/NewPasswordButton';
+import { FormContainerProps } from '../../types';
 
-const FormContainer = () => {
+const FormContainer = ({ setServiceToLS }: FormContainerProps) => {
   const [minLenghtRule, setMinLenghtRule] = useState(false);
   const [maxLenghtRule, setMaxLenghtRule] = useState(true);
   const [lettersAndNumbersRule, setLettersAndNumbersRule] = useState(false);
@@ -50,6 +51,7 @@ const FormContainer = () => {
         checkPasswordRules={ checkPasswordRules }
         handleSetShowForm={ handleSetShowForm }
         allRulesOk={ allRulesOk }
+        setServiceToLS={ setServiceToLS }
       />
       <RulesContainer
         minLenghRule={ minLenghtRule }

@@ -1,0 +1,81 @@
+@import '../../variaveis.css';
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 240px;
+  height: 190px;
+  background-color: var(--service-card-bg-color);
+  border-radius: 10px;
+  margin: 0 auto;
+  animation: service-card-animation;
+  animation-duration: 300ms;
+}
+
+.service-card .url-box,
+.service-card .credential-box,
+.service-card .delete-box {
+  display: flex;
+  width: 100%;
+}
+
+.service-card .url-box {
+  justify-content: space-between;
+}
+
+.service-card .url-box a{
+  display: flex;
+  align-items: center;
+  color: var(--card-url-color);
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 18px;
+  gap: 5px;
+}
+
+
+.service-card .credential-box {
+  flex-direction: column;
+}
+
+.service-card .credential-box .credential-box-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #303030;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.service-card .credential-box .credential-box-info:first-of-type {
+  padding-top: 15px;
+}
+
+.service-card .credential-box .credential-box-info .credential {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--credential-color);
+}
+
+.service-card .credential-box .credential-box-info span {
+  font-size: 14px;
+}
+
+.service-card .delete-box {
+  justify-content: flex-end;
+}
+
+.service-card .delete-box button{
+  justify-content: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes service-card-animation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

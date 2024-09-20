@@ -7,8 +7,10 @@
 }
 
 .login-password-wrapper {
+  width: 100%;
   display: flex;
-  gap: 1em;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .inputs-container span {
@@ -52,6 +54,7 @@
   font-size: 15px;
   font-weight: bolder;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .buttons-wrapper .submit-button:hover {

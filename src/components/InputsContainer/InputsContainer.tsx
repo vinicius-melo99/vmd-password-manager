@@ -5,8 +5,9 @@ import { InputsContainerProps } from '../../types';
 
 const InputsContainer = ({ 
     checkPasswordRules,
-    allRulesOk,
     handleSetShowForm,
+    setServiceToLS,
+    allRulesOk,
   }: InputsContainerProps) => {
   const [service, setService] = useState('');
   const [login, setLogin] = useState('');
@@ -15,6 +16,9 @@ const InputsContainer = ({
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setServiceToLS({ service, login, password, url });
+    resetStates();
+    handleSetShowForm();
   }
 
   const handleInput = ({ target: { value, name } }: ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +43,13 @@ const InputsContainer = ({
       default:
         break;
     }
+  }
+
+  const resetStates = () => {
+    setService('');
+    setLogin('');
+    setPassword('');
+    setUrl('');
   }
 
   return (
