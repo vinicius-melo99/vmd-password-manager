@@ -17,3 +17,30 @@ body {
   background-color: var(--main-color);
   color: white;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #18191f;
+  border-radius: 10px;
+  width: 7px;
+  height: 10px;
+  cursor: pointer;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #505050;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
