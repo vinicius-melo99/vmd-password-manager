@@ -4,7 +4,7 @@ Este é um projeto proposto pela Trybe, onde o objetivo é fornecer à pessoa us
 
 ## Deploy Link 🌐
 
-### Acesse o deploy do meu projeto 👉 [Netlify](https://ipdomain-tracker.netlify.app/)
+### Acesse o deploy do meu projeto 👉 [Netlify](https://vmd-password-manager.netlify.app/)
 
 ## Tabela de Conteúdos
 
